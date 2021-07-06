@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-1-5 {
+  margin-bottom: 1.5rem;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: hsl(204, 43%, 93%);
+  color: white;
+  min-height: 100vh;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  max-width: 85%;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.37);
+}
+
+section {
+  padding: 2rem 1rem;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.section-join {
+  background-color: #fff;
+  grid-area: join;
+}
+
+.section-join .title {
+  color: hsl(179, 62%, 43%);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.section-join .subtitle {
+  color: hsl(71, 73%, 54%);
+  font-weight: 700;
+}
+
+.section-join .description {
+  color: hsl(218, 22%, 67%);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.section-subscription {
+  background-color: hsl(179, 62%, 43%);
+  grid-area: subscription;
+}
+
+.section-subscription .price {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.section-subscription .price .amount {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.section-subscription .price .desc {
+  opacity: 0.5;
+}
+
+.section-subscription .description {
+  opacity: 0.7;
+}
+
+.section-subscription .button {
+  padding: 0.9rem 0;
+  margin: 0 auto;
+  text-align: center;
+  background-color: hsl(71, 73%, 54%);
+  border-radius: 5px;
+  box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.37);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.section-subscription .button:hover {
+  background-color: hsl(71, 73%, 48%);
+}
+
+.section-why {
+  background-color: hsla(179, 62%, 43%, 0.877);
+  grid-area: why;
+}
+
+.section-why .list-items {
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.section-why .list-items .item {
+  margin: 0.2rem 0;
+}
+
+.attribution {
+  color: black;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+
+/* For medium devices */
+@media screen and (min-width: 568px) {
+  section {
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "join join"
+      "subscription why";
+    max-width: 700px;
+  }
+}
