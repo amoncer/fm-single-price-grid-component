@@ -71,37 +71,39 @@ section {
   grid-area: subscription;
 }
 
-.section-subscription .price {
+.price {
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
 }
 
-.section-subscription .price .amount {
+.price .amount {
   font-weight: 700;
   font-size: 2rem;
 }
 
-.section-subscription .price .desc {
+.price .desc {
   opacity: 0.5;
 }
 
-.section-subscription .description {
+.description {
   opacity: 0.7;
 }
 
-.section-subscription .button {
+.sign-up {
+  display: block;
   padding: 0.9rem 0;
-  margin: 0 auto;
   text-align: center;
   background-color: hsl(71, 73%, 54%);
   border-radius: 5px;
   box-shadow: 0px 6px 16px -5px rgba(0, 0, 0, 0.37);
   cursor: pointer;
   transition: 0.4s;
+  text-decoration: none;
+  color: white;
 }
 
-.section-subscription .button:hover {
+.sign-up:hover {
   background-color: hsl(71, 73%, 48%);
 }
 
@@ -110,7 +112,7 @@ section {
   grid-area: why;
 }
 
-.section-why .list-items {
+.list-items {
   opacity: 0.5;
   font-weight: 400;
   font-size: 0.9rem;
@@ -124,6 +126,7 @@ section {
   color: black;
   font-size: 11px;
   text-align: center;
+  display: inline-block;
 }
 
 .attribution a {
@@ -140,6 +143,10 @@ section {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    padding: 0;
+  }
+
   .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
